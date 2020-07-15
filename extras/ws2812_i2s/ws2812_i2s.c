@@ -172,13 +172,13 @@ const IRAM_DATA int16_t bitpatterns[16] =
 
 void ws2812_i2s_update(ws2812_pixel_t *pixels, pixeltype_t type)
 {
-    printf("inside 1");
+    printf("inside 5557777");
     while (i2s_dma_processing) {};
 
     uint16_t *p_dma_buf = dma_buffer;
 
     for (uint32_t i = 0; i < (dma_buffer_size / type); i++) {
-        printf("inside 2");
+        printf("inside 5577777");
         // green
         *p_dma_buf++ =  bitpatterns[pixels[i].green & 0x0F];
         *p_dma_buf++ =  bitpatterns[pixels[i].green >> 4];
